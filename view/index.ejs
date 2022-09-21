@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="fonts.googleapis.com/css?family=Crimson+Text:400,700" />
+    <title>Todo App</title>
+</head>
+
+<body>
+    <h1><i>Todo App</i></h1>
+    <main>
+        <div id="main-content">
+            <div id="todo-submit-form">
+                <form action="/todo/add" method="POST">
+                    <input type="text" name="todo" value="">
+                    <button>Submit</button>
+                </form>
+            </div>
+            <% todos.forEach(todo=> { %>
+                <div id="todo-content">
+                    <% if(todo.status==true){ %>
+                        <div><b><%= todo.name %></b><span id="complete">(Completed)</span></div>
+                        <form></form>
+                    <% }else{ %>
+                        <span><b>
+                            <%= todo.name %>
+                        </b></span>
+                        <form action="/todo/update/<%= todo._id %>" method="POST">
+                            <button id="completed">Completed</button>
+                        </form>
+                    <%} %>
+                    <form action="/todo/delete/<%= todo._id %>" method="POST">
+                        <button id="deleted">Deleted</button>
+                    </form>
+                    <hr>                                    
+                </div>
+            <% }) %>
+        </div>
+    </main>
+</body>
+
+</html>

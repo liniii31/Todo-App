@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(143, 199, 143);
+}
+h1{
+    background-color: rgb(73, 123, 73);
+    color: aliceblue;
+    padding:2%;
+    font-family: "Crimson";
+    font-weight: 700;
+    font-size: 3rem;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#main-content{
+    height: auto;
+    width: 30rem;
+    padding : 1rem;
+    border: 2px solid white;
+    border-radius: 12px;
+    box-shadow: 5px 5px 2px 1px rgb(73, 123, 73);
+    position : relative;
+    top: -5rem;
+}
+#todo-submit-form{
+    text-align: left;
+    padding: 1rem;
+}
+#todo-content{
+    padding: 0.8rem;
+    padding-left: 1.5rem;
+    display: grid;
+    grid-template-columns: 60% 20% 20%;  
+    border-radius: 5px;
+    border : 1px solid rgb(73, 123, 73);
+     
+}
+input[type=text]{
+    width:78%;
+    padding : 0.5rem;
+    border-radius: 5px;
+    border : 1px solid rgb(73, 123, 73);
+}
+button{
+    padding : 0.5rem;
+    border-radius: 5px;
+    border : 1px solid white;
+    color: white;
+    background-color: rgb(73, 123, 73);
+}
+#completed{
+    background-color: rgb(38, 208, 38);
+}
+#deleted{
+    background-color: rgb(213, 35, 35);
+}
+#complete{
+    color:rgb(73, 123, 73);
+}
